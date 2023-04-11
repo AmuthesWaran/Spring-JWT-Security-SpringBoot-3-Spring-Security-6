@@ -19,11 +19,10 @@ import com.ammu.jwtsecurity.service.JWTUtility;
 import lombok.RequiredArgsConstructor;
 
 
-@RequiredArgsConstructor
 @RestController
 public class AuthController {
 	
-	
+	@Autowired
 	AuthenticationManager manager;
 	
 	@Autowired

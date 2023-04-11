@@ -21,11 +21,13 @@ import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 
 @Component
-@RequiredArgsConstructor
 public class JWTFilter extends OncePerRequestFilter{
 	
-	private final AuthUserDetailsService authUserDetailsService;
-	private final JWTUtility jwtUtil;
+	@Autowired
+	AuthUserDetailsService authUserDetailsService;
+	
+	@Autowired
+	JWTUtility jwtUtil;
 	
 	
 	@Override
